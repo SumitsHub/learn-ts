@@ -8,6 +8,9 @@ npm install -g typescript
 - Now you have 'tsc' command available globally
 - Check TS version installed using - 'tsc -v'
 
+## TS Playground
+Link to play with TS code online - [link](https://www.typescriptlang.org/play/)
+
 ## Compile TS file
 ```bash
 tsc filename.ts
