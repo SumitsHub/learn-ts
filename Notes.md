@@ -20,4 +20,8 @@ OR (without file extension)
 tsc filename
 ```
 - After compiling it will generate .js file with the same filename
+
+
+## General points
+- TS error messages are useful while writing the code only, it don't block - TS compiler compiles the code even with error messages
 - 
