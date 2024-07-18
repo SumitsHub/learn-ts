@@ -24,4 +24,7 @@ tsc filename
 
 ## General points
 - TS error messages are useful while writing the code only, it don't block - TS compiler compiles the code even with error messages
-- 
+
+## Type in TS
+- number, string, null, undefined, boolean, void
+- TS specific: any, never, unknown
