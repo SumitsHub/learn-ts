@@ -88,3 +88,16 @@ let mySong2 = {
 
 let earnings2 = calculatePayout(mySong2);
 console.log(earnings2);
+
+
+//* Optional properties
+type Point = {
+    x: number | string,
+    y: number | string,
+    z?: number | string
+}
+
+// valid point object without optional property 'z'
+let p1 = {x: 12, y: 32};
+// with optional property as well
+let p2 = {x: 54, y:78, z: 98}
