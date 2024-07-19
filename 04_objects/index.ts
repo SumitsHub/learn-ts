@@ -89,15 +89,53 @@ let mySong2 = {
 let earnings2 = calculatePayout(mySong2);
 console.log(earnings2);
 
-
 //* Optional properties
 type Point = {
-    x: number | string,
-    y: number | string,
-    z?: number | string
-}
+  x: number | string;
+  y: number | string;
+  z?: number | string;
+};
 
 // valid point object without optional property 'z'
-let p1 = {x: 12, y: 32};
+let p1 = { x: 12, y: 32 };
 // with optional property as well
-let p2 = {x: 54, y:78, z: 98}
+let p2 = { x: 54, y: 78, z: 98 };
+
+//* 'readonly' modifier - you can only read the property of object - this is TS specific
+
+type Person = {
+  readonly id: number;
+  username: string;
+};
+
+let p: Person = {
+  id: 123,
+  username: "theguru",
+};
+
+// p.id = 34; // ERROR - Cannot assign to 'id' because it is a read-only property.
+
+//* Intersection types
+
+type A = {
+  a: string;
+};
+
+type B = {
+  b: string;
+};
+
+type AB = A & B;
+
+let ab: AB = {
+  a: "A",
+  b: "B",
+};
+
+type ABC = A & B & { c: string };
+
+let abc = {
+  a: "A",
+  b: "B",
+  c: "C",
+};
