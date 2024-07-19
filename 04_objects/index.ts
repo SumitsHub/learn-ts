@@ -1,10 +1,10 @@
-//* defining object with type
+//* defining object type with object literal
 
 let coordinates: { x: number; y: number } = { x: 34, y: 43 };
 // coordinates.z = 43; // ERROR - Property 'z' does not exist on type '{ x: number; y: number; }'
 // coordinates.x = "45"; // ERROR - Type 'string' is not assignable to type 'number'.
 
-//* Parameter annotation
+//* Parameter Annotation - Object literal
 
 function printName(name: { first: string; last: string }) {
   console.log(`${name.first} ${name.last}`);
@@ -29,7 +29,7 @@ function createPerson(name: string): { name: string; age: number } {
 // printName({ first: "Pallavi", last: "Borate", age: 30 }); // ERROR - Object literal may only specify known properties, and 'age' does not exist in type '{ first: string; last: string; }'.
 let person = { first: "Pallavi", last: "Borate", age: 30 };
 printName(person); // NO ERROR when variable passed instead of object literal
-printName({ ...person }); // NO ERROR
+printName({ ...person }); // NO ERROR - spread operator
 
 //* 'type' alias - instead of using object literals for type annotation we can create type alias
 
@@ -99,12 +99,12 @@ type Point = {
 // valid point object without optional property 'z'
 let p1 = { x: 12, y: 32 };
 // with optional property as well
-let p2 = { x: 54, y: 78, z: 98 };
+let p2 = { x: 54, y: "78", z: 98 };
 
 //* 'readonly' modifier - you can only read the property of object - this is TS specific
 
 type Person = {
-  readonly id: number;
+  readonly id: number; // property with readonly modifier
   username: string;
 };
 

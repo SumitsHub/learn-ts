@@ -19,7 +19,7 @@ multiply(23, 5.6);
 // multiply(2, 'Something'); // Error: Argument of type 'string' is not assignable to parameter of type 'number'.
 // NOTE: from error message we can understand difference between 'argument' and 'parameter'
 
-// multiply(true, 4);
+// multiply(true, 4); // ERROR
 
 const greet = (name: string, age: number) => {
   console.log(
@@ -59,13 +59,13 @@ function rando(num: number) {
   return Math.random();
 }
 
-// Annotating return type
+//* Annotating return type
 function add2(num: number): number {
   return num + 2;
 }
 
-const add3 = (num: number): number => {
-  return num + 3;
+const add3 = (num: number): string => {
+  return num + "3";
 };
 
 //* Contextual type inference
