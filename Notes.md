@@ -28,3 +28,10 @@ tsc filename
 ## Type in TS
 - number, string, null, undefined, boolean, void
 - TS specific: any, never, unknown
+
+
+## Difference between 'types' and 'interface'
+- interface can't have multiple aliases and can be use to define object type only
+- type alias can be anything literally -> type Answer = 'YES' | 'NO';
+- interface can be reopened type alias can't
+- interface can 'extend' whereas type alias can intersect using '&'
