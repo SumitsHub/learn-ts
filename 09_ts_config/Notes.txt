@@ -1,0 +1,5 @@
+Run 'tsc --init' to generate 'tsconfig.json' file
+
+Run 'tsc -w index' OR 'tsc --watch' to start compilation in watch mode
+
+By default 'tsc' OR 'tsc --watch' command will look for all the '.ts' files in the current directory
