@@ -11,9 +11,9 @@ var lion = {
         this.name = name;
     },
 };
-console.log(lion.getName());
+console.log(lion.getName()); // Lammy
 lion.setName("King");
-console.log(lion.getName());
+console.log(lion.getName()); // King
 var shoes = {
     name: "Blue moon shoes",
     price: 100,
@@ -24,4 +24,17 @@ var shoes = {
     },
 };
 shoes.applyDiscount(40);
-console.log(shoes.price);
+console.log(shoes.price); // 6-
+var item = {
+    name: "Bike",
+    price: 2000000,
+    color: "black", // added property by reopening
+};
+var engineer = {
+    id: '192458',
+    fname: 'Ajit',
+    lname: 'Doval',
+    email: 'ajit@gmail.com',
+    level: 'Senior Developer',
+    languages: ['JavaScript', 'Python']
+};

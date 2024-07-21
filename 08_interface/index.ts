@@ -62,3 +62,53 @@ let shoes: Product = {
 
 shoes.applyDiscount(40);
 console.log(shoes.price); // 6-
+
+//* Reopening Interfaces - interfaces don't get override if re-declared in the same scope instead get's merged
+
+interface Item {
+  name: string;
+  price: number;
+}
+
+// let item: Item = { // ERROR: Property 'color' is missing - because of reopening the interface below
+//     name: 'Laptop',
+//     price: 120000
+// }
+
+// reopening the interface Item
+interface Item {
+  color: string;
+// name: number; // ERROR: Subsequent property declarations must have the same type.
+}
+
+let item: Item = {
+  name: "Bike",
+  price: 2000000,
+  color: "black", // added property by reopening
+};
+
+
+//* Extending interfaces
+interface Person2 {
+    fname: string,
+    lname: string
+}
+
+interface Employee {
+    readonly id: number | string;
+    email: string
+}
+
+interface Engineer extends Person2, Employee {
+    level: string,
+    languages: string[]
+}
+
+let engineer: Engineer = {
+    id: '192458',
+    fname: 'Ajit',
+    lname: 'Doval',
+    email: 'ajit@gmail.com',
+    level: 'Senior Developer',
+    languages: ['JavaScript', 'Python']
+}
