@@ -18,7 +18,14 @@ mystery.length;
 //* Type assertion with DOM
 const clickBtn = document.getElementById('btn');
 const inputElement = document.getElementById('todoInput');
-clickBtn.addEventListener('click', function () {
-    alert(inputElement.value);
-    inputElement.value = "";
-});
+// clickBtn.addEventListener('click', function(){
+//   alert(inputElement.value);
+//   inputElement.value = "";
+// })
+const todoForm = document.querySelector('form');
+//* Working with Events - submit event
+function handleSubmit(e) {
+    e.preventDefault();
+    console.log('Submitted!!');
+}
+todoForm.addEventListener('submit', handleSubmit);
