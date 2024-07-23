@@ -1,6 +1,6 @@
 "use strict";
 const btn = document.getElementById("btn"); //* Type- HTMLElement | null
-console.log(btn);
+// console.log(btn);
 // btn.addEventListener("click", function () {
 //   //* 'btn' is possibly 'null'
 //   alert("Clicked");
@@ -37,7 +37,7 @@ function handleSubmit(e) {
     };
     createTodo(todo);
     todoList.push(todo);
-    localStorage.setItem('todos', JSON.stringify(todoList));
+    saveTodos();
     inputElement.value = "";
 }
 function getTodosFromStorage() {
@@ -51,10 +51,17 @@ function createTodo(todo) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = todo.completed;
+    checkbox.addEventListener("change", function () {
+        todo.completed = checkbox.checked;
+        saveTodos();
+    });
     // newTodoElement.innerText = todoText;
     // OR
     newTodoElement.append(todo.text);
     newTodoElement.append(checkbox);
     todoListElement.append(newTodoElement);
+}
+function saveTodos() {
+    localStorage.setItem("todos", JSON.stringify(todoList));
 }
 todoForm.addEventListener('submit', handleSubmit);
