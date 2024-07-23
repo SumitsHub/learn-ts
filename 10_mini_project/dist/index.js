@@ -15,6 +15,7 @@ const mystery = "Mystery";
 // mystery.length; // ERROR: 'mystery' is of type 'unknown'.
 // asserting type -
 mystery.length;
+const todoList = [];
 //* Type assertion with DOM
 const clickBtn = document.getElementById("btn");
 const inputElement = document.getElementById("todoInput");
@@ -23,19 +24,27 @@ const inputElement = document.getElementById("todoInput");
 //   inputElement.value = "";
 // })
 const todoForm = document.querySelector("form");
-const todoList = document.getElementById("todoList");
+const todoListElement = document.getElementById("todoList");
 //* Working with Events - submit event
 function handleSubmit(e) {
     e.preventDefault();
-    const todoText = inputElement.value;
+    const todo = {
+        text: inputElement.value,
+        completed: false,
+    };
+    todoList.push(todo);
+    createTodo(todo);
+    inputElement.value = "";
+}
+function createTodo(todo) {
     const newTodoElement = document.createElement("li");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+    checkbox.checked = todo.completed;
     // newTodoElement.innerText = todoText;
     // OR
-    newTodoElement.append(todoText);
+    newTodoElement.append(todo.text);
     newTodoElement.append(checkbox);
-    todoList.append(newTodoElement);
-    inputElement.value = "";
+    todoListElement.append(newTodoElement);
 }
 todoForm.addEventListener('submit', handleSubmit);
