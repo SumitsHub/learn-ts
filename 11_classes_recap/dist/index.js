@@ -51,6 +51,16 @@ class Person {
   }
 }
 
+// Inheritance - extending class to reuse enhance functionality of class
+class SuperPerson extends Person {
+  constructor() {
+    // super keyword - to invoke constructor of parent class
+    super("Batman", 100);
+    this.power = "SuperPower";
+  }
+}
+
+
 const person1 = new Person("Alice", 30);
 person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
 person1.incWin();
@@ -79,3 +89,9 @@ console.log(person1.species); // undefined
 
 console.log(Person.createNewPerson());
 // console.log(person1.createNewPerson()); // ERROR: it's not a function
+
+
+// creating instance of SuperPerson class
+// const sp = SuperPerson(); // ERROR - if invoked without new keyword
+const sp = new SuperPerson();
+console.log(sp); // it has all properties from Person including private properties
