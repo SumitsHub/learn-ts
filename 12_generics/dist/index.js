@@ -66,3 +66,23 @@ const arr3 = createArray2(5, "hello");
 console.log(arr3); // ["hello", "hello", "hello", "hello", "hello"]
 const arr4 = createArray2(5, 10);
 console.log(arr4); // [10, 10, 10, 10, 10]
+//* Generics with classes
+class DataStorage {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeItem(item) {
+        this.data = this.data.filter((el) => el !== item);
+    }
+    getItems() {
+        return [...this.data];
+    }
+}
+const textStorage = new DataStorage();
+textStorage.addItem("hello");
+textStorage.addItem("world");
+textStorage.addItem("typescript");
+console.log(textStorage.getItems()); // ["hello", "world", "typescript"]
