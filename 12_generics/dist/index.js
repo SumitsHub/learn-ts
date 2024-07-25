@@ -31,7 +31,13 @@ function randomElement(arr) {
 const randomStr = randomElement(["hello", "world", "typescript"]);
 console.log(randomStr); // hello | world | typescript
 const randomNum = randomElement([10, 20, 30, 40, 50]);
-console.log(randomNum); // 
+console.log(randomNum); //
 //* inferred generic type parameter
 console.log(randomElement(["hello", "world", "typescript"])); // TypeScript will infer the type of T as string
 console.log(randomElement([true, false, true])); // TypeScript will infer the type of T as boolean
+//* Generics with multiple type parameters
+function merge(obj1, obj2) {
+    return Object.assign(Object.assign({}, obj1), obj2);
+}
+const mergedObj = merge({ name: "John" }, { age: 30 });
+console.log(mergedObj); // {name: "John", age: 30}

@@ -36,10 +36,15 @@ function randomElement<T>(arr: T[]): T {
 const randomStr = randomElement<string>(["hello", "world", "typescript"]);
 console.log(randomStr); // hello | world | typescript
 const randomNum = randomElement<number>([10, 20, 30, 40, 50]);
-console.log(randomNum); // 
-
+console.log(randomNum); //
 
 //* inferred generic type parameter
 console.log(randomElement(["hello", "world", "typescript"])); // TypeScript will infer the type of T as string
 console.log(randomElement([true, false, true])); // TypeScript will infer the type of T as boolean
 
+//* Generics with multiple type parameters
+function merge<T, U>(obj1: T, obj2: U): T & U {
+  return { ...obj1, ...obj2 };
+}
+const mergedObj = merge({ name: "John" }, { age: 30 });
+console.log(mergedObj); // {name: "John", age: 30}
