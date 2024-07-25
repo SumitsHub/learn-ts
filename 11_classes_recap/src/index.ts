@@ -17,6 +17,9 @@ class Player {
   // OR - use JS syntax
   #netWorth = 120000;
 
+  //* protected modifier - only accessible within class 'Player' and its subclasses
+  protected sharedVar: string = "Something shared to inherited class only";
+
   //   constructor(first: string, last: string) {
   //     this.first = first;
   //     this.last = last;
@@ -49,6 +52,16 @@ class Player {
   }
 }
 
+class SuperPlayer extends Player {
+  readWorth() {
+    // return this.netWorth; // ERROR - Property 'netWorth' is private and only accessible within class 'Player'.
+  }
+
+  getProtectedVar() {
+    return this.sharedVar;
+  }
+}
+
 const elton = new Player("Elton", "Steele");
 // elton.nickName = 'Something'; // ERROR- Cannot assign to 'nickName' because it is a read-only property.
 
@@ -59,3 +72,10 @@ console.log(elton);
 
 elton.worth = 123000;
 console.log(elton.worth);
+
+
+const sp = new SuperPlayer("Christiano", "Ronaldo");
+console.log(sp.getProtectedVar());
+
+// console.log(sp.sharedVar); // ERROR - Property 'sharedVar' is protected and only accessible within class 'Player' and its subclasses.
+
