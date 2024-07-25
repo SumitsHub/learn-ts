@@ -48,3 +48,21 @@ function merge<T, U>(obj1: T, obj2: U): T & U {
 }
 const mergedObj = merge({ name: "John" }, { age: 30 });
 console.log(mergedObj); // {name: "John", age: 30}
+
+
+//* Generics with constraints
+interface Lengthwise {
+  length: number;
+}
+// function to get length of an object that has length property
+function getLength<T extends Lengthwise>(arg: T): number {
+  return arg.length;
+}
+console.log(getLength("hello")); // 5
+console.log(getLength([1, 2, 3])); // 3
+console.log(getLength({ length: 10 })); // 10
+
+// console.log(getLength(4)); // Error: Argument of type '4' is not assignable to parameter of type 'Lengthwise'
+
+// NOTE: we can't extend interface while defining class
+// class Some extends Lengthwise { } 
