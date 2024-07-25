@@ -70,4 +70,21 @@ elton.worth = 123000;
 console.log(elton.worth);
 const sp = new SuperPlayer("Christiano", "Ronaldo");
 console.log(sp.getProtectedVar());
-// console.log(sp.sharedVar); // ERROR - Property 'sharedVar' is protected and only accessible within class 'Player' and its subclasses.
+class MT15 {
+    // color = 'Red';
+    // OR
+    constructor(color) {
+        this.color = color;
+    }
+}
+class Bullet {
+    constructor(brand, color) {
+        this.brand = brand;
+        this.color = color;
+    }
+}
+class Printer {
+    print() {
+        console.log('This is printable!');
+    }
+}

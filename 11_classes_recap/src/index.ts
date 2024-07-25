@@ -79,3 +79,31 @@ console.log(sp.getProtectedVar());
 
 // console.log(sp.sharedVar); // ERROR - Property 'sharedVar' is protected and only accessible within class 'Player' and its subclasses.
 
+
+
+//* implementing interface
+
+interface Bike {
+    color: string;
+}
+
+class MT15 implements Bike {
+    // color = 'Red';
+    // OR
+    constructor(public color: string) {}
+}
+
+class Bullet implements Bike {
+    constructor(public brand: string, public color: string) {}
+}
+
+interface Printable {
+    print(): void;
+}
+
+class Printer implements Printable {
+    print(): void {
+        console.log('This is printable!');
+        
+    }
+}
