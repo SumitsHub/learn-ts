@@ -32,6 +32,21 @@ class Player {
 
     this.sport = "Football";
   }
+
+  //* getter and setter
+  get fullName(): string {
+    return `${this.first} ${this.last}`;
+  }
+
+  get worth(): number {
+    return this.#netWorth - 10000;
+  }
+
+  // NOTE: setter cannot return anything - so will not have any return type
+  set worth(newWorth: number) {
+    if (newWorth < 0) throw new Error("net worth cannot be negative");
+    this.#netWorth = newWorth;
+  }
 }
 
 const elton = new Player("Elton", "Steele");
@@ -41,3 +56,6 @@ console.log(elton);
 
 // elton.netWorth; // ERROR - Property 'netWorth' is private and only accessible within class 'Player'.
 // elton.#netWorth; // ERROR- not accessible outside of the class
+
+elton.worth = 123000;
+console.log(elton.worth);
