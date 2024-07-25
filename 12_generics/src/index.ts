@@ -66,3 +66,12 @@ console.log(getLength({ length: 10 })); // 10
 
 // NOTE: we can't extend interface while defining class
 // class Some extends Lengthwise { } 
+
+//* Generics with keyof constraint
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+const person = { name: "John", age: 30 };
+console.log(getProperty(person, "name")); // John
+
+// console.log(keyof person); // ERROR: 'keyof' type operator cannot be applied to an expression whose type lacks a call or index signature
