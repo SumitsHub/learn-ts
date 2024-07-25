@@ -107,3 +107,36 @@ class Printer implements Printable {
         
     }
 }
+
+
+//* Abstract class - similar to interface, cannot be instantiated - this is specific to TS
+abstract class Employee {
+  constructor(public name: string) {}
+
+  // defining abstract method which will be implemented by child class
+  abstract getSalary(): number;
+
+  greet() {
+    console.log(`Hello, I am ${this.name}.`);
+  }
+}
+
+
+//* cannot create instance of abstract class
+// const emp = new Employee('John'); // ERROR - Cannot create an instance of an abstract class.
+
+//* extending abstract class
+class Developer extends Employee {
+  constructor(name: string, public salary: number) {
+    super(name);
+  }
+
+  // implementing abstract method
+  getSalary(): number {
+    return this.salary;
+  }
+}
+
+//* creating instance of Developer class
+const dev = new Developer('John', 120000);
+console.log('Salary %d', dev.getSalary()); // Salary 120000

@@ -88,3 +88,28 @@ class Printer {
         console.log('This is printable!');
     }
 }
+//* Abstract class - similar to interface, cannot be instantiated - this is specific to TS
+class Employee {
+    constructor(name) {
+        this.name = name;
+    }
+    greet() {
+        console.log(`Hello, I am ${this.name}.`);
+    }
+}
+//* cannot create instance of abstract class
+// const emp = new Employee('John'); // ERROR - Cannot create an instance of an abstract class.
+//* extending abstract class
+class Developer extends Employee {
+    constructor(name, salary) {
+        super(name);
+        this.salary = salary;
+    }
+    // implementing abstract method
+    getSalary() {
+        return this.salary;
+    }
+}
+//* creating instance of Developer class
+const dev = new Developer('John', 120000);
+console.log('Salary %d', dev.getSalary()); // Salary 120000
