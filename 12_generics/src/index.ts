@@ -14,7 +14,7 @@ const inpuEl = document.querySelector<HTMLInputElement>("#username")!;
 console.dir(inpuEl);
 console.log(inpuEl.value);
 
-const btnEl = document.querySelector<HTMLButtonElement>("btn")!;
+const btnEl = document.querySelector<HTMLButtonElement>(".btn")!;
 console.log(btnEl.textContent);
 
 //* creating own generic function
@@ -75,3 +75,13 @@ const person = { name: "John", age: 30 };
 console.log(getProperty(person, "name")); // John
 
 // console.log(keyof person); // ERROR: 'keyof' type operator cannot be applied to an expression whose type lacks a call or index signature
+
+
+//* default type parameter
+function createArray2<T = string>(length: number, value: T): Array<T> {
+  return new Array(length).fill(value);
+}
+const arr3 = createArray2(5, "hello");
+console.log(arr3); // ["hello", "hello", "hello", "hello", "hello"]
+const arr4 = createArray2<number>(5, 10);
+console.log(arr4); // [10, 10, 10, 10, 10]

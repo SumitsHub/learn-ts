@@ -11,7 +11,7 @@ const inpuEl = document.querySelector("#username");
 // const inpuEl = document.querySelector('#username') as HTMLInputElement;
 console.dir(inpuEl);
 console.log(inpuEl.value);
-const btnEl = document.querySelector("btn");
+const btnEl = document.querySelector(".btn");
 console.log(btnEl.textContent);
 //* creating own generic function
 function createArray(length, value) {
@@ -58,3 +58,11 @@ function getProperty(obj, key) {
 const person = { name: "John", age: 30 };
 console.log(getProperty(person, "name")); // John
 // console.log(keyof person); // ERROR: 'keyof' type operator cannot be applied to an expression whose type lacks a call or index signature
+//* default type parameter
+function createArray2(length, value) {
+    return new Array(length).fill(value);
+}
+const arr3 = createArray2(5, "hello");
+console.log(arr3); // ["hello", "hello", "hello", "hello", "hello"]
+const arr4 = createArray2(5, 10);
+console.log(arr4); // [10, 10, 10, 10, 10]
