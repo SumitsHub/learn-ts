@@ -59,3 +59,30 @@ function printFullDate(date: string | Date) {
   else console.log(new Date(date).getUTCDate()); // date: string
 }
 
+//* Type Predicates - Syntax: `parameterType is Type` - used as return type of function
+
+interface Cat {
+  name: string;
+  noOfLives: number;
+}
+
+interface Dog {
+  name: string;
+  breed: string;
+}
+
+// defining function to return type predicate for narrowing type
+function isCat(animal: Cat | Dog): animal is Cat {
+  return (animal as Cat).noOfLives !== undefined;
+}
+
+function makeNoise(animal: Cat | Dog) {
+  if (isCat(animal)) {
+    console.log("Meow"); // animal: Cat
+  } else {
+    console.log("Bark"); // animal: Dog
+  }
+}
+
+
+makeNoise({ name: "Sundari", noOfLives: 5 }); // Meow

@@ -43,3 +43,16 @@ function printFullDate(date) {
     else
         console.log(new Date(date).getUTCDate()); // date: string
 }
+// defining function to return type predicate for narrowing type
+function isCat(animal) {
+    return animal.noOfLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        console.log("Meow"); // animal: Cat
+    }
+    else {
+        console.log("Bark"); // animal: Dog
+    }
+}
+makeNoise({ name: "Sundari", noOfLives: 5 }); // Meow
