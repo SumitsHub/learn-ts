@@ -36,3 +36,10 @@ function getRuntime(media) {
 console.log(getRuntime({ title: "Amadeus", duration: 145 })); // 145
 console.log(getRuntime({ title: "Spongebob", noOfEpisodes: 13, episodeDuration: 30 }) // 390
 );
+//* 'instanceOf' narrowing
+function printFullDate(date) {
+    if (date instanceof Date)
+        console.log(date.getUTCDate()); // date: Date
+    else
+        console.log(new Date(date).getUTCDate()); // date: string
+}
