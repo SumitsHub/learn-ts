@@ -19,11 +19,20 @@ function func(x, y) {
     if (x === y) {
         // x // string
         // y // string
-        console.log('x and y are string');
+        console.log("x and y are string");
     }
     else {
         // x // string | number
         // y // string | boolean
-        console.log('x or y is not string');
+        console.log("x or y is not string");
     }
 }
+function getRuntime(media) {
+    // console.log(typeof media); // object - cannot use typeof for type narrowing for object parameter
+    if ("noOfEpisodes" in media)
+        return media.noOfEpisodes * media.episodeDuration;
+    return media.duration;
+}
+console.log(getRuntime({ title: "Amadeus", duration: 145 })); // 145
+console.log(getRuntime({ title: "Spongebob", noOfEpisodes: 13, episodeDuration: 30 }) // 390
+);
