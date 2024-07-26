@@ -64,6 +64,15 @@ function area(shape) {
             return shape.width * shape.height;
         case "circle":
             return Math.PI * shape.radius ** 2;
+        // comment below case to see exhaustiveness check error
+        case "triangle":
+            return (shape.base * shape.height) / 2;
+        // exhaustiveness check - if we add a new shape type, it will throw an error
+        // this helps to handle all possible cases - default block should not get executed
+        default:
+            // we should never make it here
+            const _exhaustiveCheck = shape;
+            return _exhaustiveCheck;
     }
 }
 console.log(area({ kind: "square", size: 5 })); // 25

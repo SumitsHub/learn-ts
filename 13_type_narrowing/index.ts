@@ -106,7 +106,17 @@ interface Circle {
   radius: number;
 }
 
-function area(shape: Square | Rectangle | Circle) {
+// defined Triangle interface to show exhaustiveness check
+interface Triangle {
+  kind: "triangle"; // literal property
+  base: number;
+  height: number;
+}
+
+// added Triangle type to show exhaustiveness check
+type Shape = Square | Rectangle | Circle | Triangle;
+
+function area(shape: Shape) {
   switch (shape.kind) {
     case "square":
       return shape.size * shape.size;
@@ -114,6 +124,15 @@ function area(shape: Square | Rectangle | Circle) {
       return shape.width * shape.height;
     case "circle":
       return Math.PI * shape.radius ** 2;
+    // comment below case to see exhaustiveness check error
+    case "triangle":
+      return (shape.base * shape.height) / 2;
+    // exhaustiveness check - if we add a new shape type, it will throw an error
+    // this helps to handle all possible cases - default block should not get executed
+    default:
+      // we should never make it here
+      const _exhaustiveCheck: never = shape;
+      return _exhaustiveCheck;
   }
 }
 
