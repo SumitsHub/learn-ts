@@ -86,3 +86,37 @@ function makeNoise(animal: Cat | Dog) {
 
 
 makeNoise({ name: "Sundari", noOfLives: 5 }); // Meow
+
+
+//* Discriminated unions - a common pattern in Typescript involves creating a 'literal property' that is common across multiple types.
+
+interface Square {
+  kind: "square"; // literal property - this property is called a discriminant or tag property.
+  size: number;
+}
+
+interface Rectangle {
+  kind: "rectangle"; // literal property
+  width: number;
+  height: number;
+}
+
+interface Circle {
+  kind: "circle"; // literal property
+  radius: number;
+}
+
+function area(shape: Square | Rectangle | Circle) {
+  switch (shape.kind) {
+    case "square":
+      return shape.size * shape.size;
+    case "rectangle":
+      return shape.width * shape.height;
+    case "circle":
+      return Math.PI * shape.radius ** 2;
+  }
+}
+
+console.log(area({ kind: "square", size: 5 })); // 25
+console.log(area({ kind: "rectangle", width: 5, height: 10 })); // 50
+console.log(area({ kind: "circle", radius: 5 })); // 78.54

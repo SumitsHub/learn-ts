@@ -56,3 +56,16 @@ function makeNoise(animal) {
     }
 }
 makeNoise({ name: "Sundari", noOfLives: 5 }); // Meow
+function area(shape) {
+    switch (shape.kind) {
+        case "square":
+            return shape.size * shape.size;
+        case "rectangle":
+            return shape.width * shape.height;
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+    }
+}
+console.log(area({ kind: "square", size: 5 })); // 25
+console.log(area({ kind: "rectangle", width: 5, height: 10 })); // 50
+console.log(area({ kind: "circle", radius: 5 })); // 78.54
