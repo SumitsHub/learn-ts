@@ -14,3 +14,16 @@ if (el) {
 else {
     console.log(typeof el); // null
 }
+//* Equality narrowing
+function func(x, y) {
+    if (x === y) {
+        // x // string
+        // y // string
+        console.log('x and y are string');
+    }
+    else {
+        // x // string | number
+        // y // string | boolean
+        console.log('x or y is not string');
+    }
+}
