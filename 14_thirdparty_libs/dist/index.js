@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
+const lodash_1 = __importDefault(require("lodash"));
 function getUser(id) {
     axios_1.default
         .get(`https://jsonplaceholder.typicode.com/users/${id}`)
@@ -38,3 +39,5 @@ function getUsers() {
 (() => __awaiter(void 0, void 0, void 0, function* () {
     (yield getUsers()).map(printUser);
 }))();
+// installed types separately to get types support
+console.log(lodash_1.default.sample([1, 5, 9, 0, 34, 23]));

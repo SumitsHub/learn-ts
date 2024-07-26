@@ -35,3 +35,14 @@ tsc filename
 - type alias can be anything literally -> type Answer = 'YES' | 'NO';
 - interface can be reopened type alias can't
 - interface can 'extend' whereas type alias can intersect using '&'
+
+## Type Declaration Files
+- `.d.ts` files used for type declarations purpose
+- Every package that supports typescript will have this file
+
+## Installing types separately
+- Some dependencies don't come with type declarations
+- We can get types from '@types' package - 
+  - [npmjs](https://www.npmjs.com/package/@types/node)
+  - [github](https://github.com/DefinitelyTyped/DefinitelyTyped)
+  - Example: `npm install --save-dev @types/lodash`

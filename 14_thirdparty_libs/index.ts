@@ -1,5 +1,6 @@
 import axios from "axios";
 import { User } from "./types";
+import _ from "lodash";
 
 function getUser(id: number) {
   axios
@@ -31,3 +32,6 @@ async function getUsers() {
 (async () => {
   (await getUsers()).map(printUser);
 })();
+
+// installed types separately to get types support
+console.log(_.sample([1, 5, 9, 0, 34, 23]));
