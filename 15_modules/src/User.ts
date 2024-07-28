@@ -1,4 +1,6 @@
-class User {
+import { type User as UserType } from "./types";
+
+class User implements UserType {
   constructor(public name: string, public age: number) {}
 
   logout() {
