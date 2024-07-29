@@ -1,6 +1,6 @@
-import Dog from "./Dog.js";
-import ShelterDog from "./ShelterDog.js";
-import { add, multiply } from "./utils.js";
+import Dog from "./Dog";
+import ShelterDog from "./ShelterDog";
+import { add, multiply } from "./utils";
 
 let dog = new Dog("Sheru", 0.5);
 console.log(dog.getAge());

@@ -2,9 +2,9 @@
   "name": "webpack_ts",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
