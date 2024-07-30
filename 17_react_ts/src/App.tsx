@@ -3,6 +3,7 @@
 import { useState } from "react";
 import ShoppingList from "./components/ShoppingList";
 import Item from "./models/Item";
+import ShoppingListForm from "./components/ShoppingListForm";
 
 const initialItems: Item[] = [
   { id: 1, product: "Lemon", quantity: 12 },
@@ -16,6 +17,7 @@ function App() {
       <h1>Hello from Typescript</h1>
       {/* <Greeter name="Colt" /> */}
 
+      <ShoppingListForm />
       <ShoppingList items={items} />
     </>
   );
