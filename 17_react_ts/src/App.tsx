@@ -12,12 +12,19 @@ const initialItems: Item[] = [
 function App() {
   const [items, setItems] = useState<Item[]>(initialItems);
 
+  const handleAddItem = (product: string, quantity: number): void => {
+    setItems(prevItems => [
+      ...prevItems,
+      { id: new Date().getTime(), product, quantity },
+    ]);
+  };
+
   return (
     <>
       <h1>Hello from Typescript</h1>
       {/* <Greeter name="Colt" /> */}
 
-      <ShoppingListForm />
+      <ShoppingListForm onSubmit={handleAddItem} />
       <ShoppingList items={items} />
     </>
   );
