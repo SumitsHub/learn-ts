@@ -21,7 +21,7 @@ ages[0] = 45;
 //* Alternate way
 const bools: Array<boolean> = []; // Similar to => const bools: boolean[] = [];
 // const numbers: Array<number>; // ERROR: 'const' declarations must be initialized.
-let strings: Array<string>;
+let strings: Array<string> = new Array();
 
 //* Array of custom type
 type Point = {
@@ -43,3 +43,4 @@ const board: string[][] = [
 ];
 
 // TODO: how can be define type with different types for multidimensional array for ex. [string][number]
+const mixed: (string | number)[][] = [[1, "dd", 3], [23]];

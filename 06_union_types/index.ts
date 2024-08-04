@@ -52,7 +52,7 @@ const coords: (Point | Loc)[] = [];
 coords.push({ x: 12, y: 43 });
 coords.push({ lat: 24, long: 98 });
 
-//* Literal types - literal types are not just types but the values themselves too
+//* Literal types - literal types are not just types but the values themselves too - using values as types
 
 // Not so useful examples -
 // type '0'

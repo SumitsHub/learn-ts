@@ -116,6 +116,7 @@ let p: Person = {
 // p.id = 34; // ERROR - Cannot assign to 'id' because it is a read-only property.
 
 //* Intersection types
+// OR Union Types?
 
 type A = {
   a: string;
