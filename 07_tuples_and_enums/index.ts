@@ -7,7 +7,7 @@ type Color = [number, number, number];
 
 // let red: Color = []; // ERROR - Type '[]' is not assignable to type 'Color'.
 let green: Color = [0, 155, 0];
-// let blue: Color = [0, 0, "155"]; // ERROR: ype '[]' is not assignable to type 'Color'.
+// let blue: Color = [0, 0, "155"]; // ERROR: type '[]' is not assignable to type 'Color'.
 
 type HTTPResponse = [number, string];
 
