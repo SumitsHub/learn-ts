@@ -40,7 +40,8 @@ interface TVShow {
 }
 
 function getRuntime(media: Movie | TVShow): number {
-  // console.log(typeof media); // object - cannot use typeof for type narrowing for object parameter
+  // console.log(typeof media);
+  // object - cannot use typeof for type narrowing for object parameter
 
   if ("noOfEpisodes" in media)
     return media.noOfEpisodes * media.episodeDuration;
@@ -139,3 +140,8 @@ function area(shape: Shape) {
 console.log(area({ kind: "square", size: 5 })); // 25
 console.log(area({ kind: "rectangle", width: 5, height: 10 })); // 50
 console.log(area({ kind: "circle", radius: 5 })); // 78.54
+
+
+//* Other possible ways -
+// 1. Array.isArray()
+// 2. Number.isNaN()

@@ -6,7 +6,6 @@ function getUser(id: number) {
   axios
     .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(res => {
-      //   console.log(res.data);
       const { data } = res;
       console.log(data.company.catchPhrase);
       printUser(data);
@@ -33,5 +32,5 @@ async function getUsers() {
   (await getUsers()).map(printUser);
 })();
 
-// installed types separately to get types support
+// installed types separately for "lodash" to get types support
 console.log(_.sample([1, 5, 9, 0, 34, 23]));
