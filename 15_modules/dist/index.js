@@ -1,4 +1,5 @@
-// import { add, getRandomElement } from "./utils.ts"; // ERROR: An import path can only end with a '.ts' extension when 'allowImportingTsExtensions' is enabled.
+// import { add, getRandomElement } from "./utils.ts";
+// ERROR: An import path can only end with a '.ts' extension when 'allowImportingTsExtensions' is enabled.
 import { add, getRandomElement } from "./utils.js";
 import User, { userHelper as helper } from "./User.js";
 // using import statement will make TS to consider ts files as module
