@@ -21,6 +21,8 @@ multiply(23, 5.6);
 
 // multiply(true, 4); // ERROR
 
+
+//* Arrow function
 const greet = (name: string, age: number) => {
   console.log(
     `Hello there, ${name}. You were born in year ${
@@ -44,9 +46,11 @@ function greet2(name: string = "Unknown") {
 greet2(); // NO ERROR
 greet2("Devil");
 
-// greet2(23);
+// greet2(23); // ERROR - Argument of type 'number' is not assignable to parameter of type 'string'.
 
-//* Return type annotation
+//* Return type annotation */
+// NOTE - return type always get inferred based on return value
+
 // Implicit return type - 'number'
 function sum(num: number) {
   return num + 5;

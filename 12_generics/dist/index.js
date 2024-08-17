@@ -51,13 +51,14 @@ console.log(getLength({ length: 10 })); // 10
 // console.log(getLength(4)); // Error: Argument of type '4' is not assignable to parameter of type 'Lengthwise'
 // NOTE: we can't extend interface while defining class
 // class Some extends Lengthwise { } 
-//* Generics with keyof constraint
+//* Generics with "keyof" constraint
 function getProperty(obj, key) {
     return obj[key];
 }
 const person = { name: "John", age: 30 };
 console.log(getProperty(person, "name")); // John
 // console.log(keyof person); // ERROR: 'keyof' type operator cannot be applied to an expression whose type lacks a call or index signature
+console.log(getProperty("Something", "length")); // 9
 //* default type parameter
 function createArray2(length, value) {
     return new Array(length).fill(value);
