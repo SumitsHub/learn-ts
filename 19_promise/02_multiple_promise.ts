@@ -1,6 +1,6 @@
 // Create multiple functions that return Promises.
-// Use Promise.all to handle multiple Promises concurrently.
-// Use Promise.race to handle the first resolved or rejected Promise.
+// Use "Promise.all()" to handle multiple Promises concurrently.
+// Use "Promise.race()" to handle the first resolved or rejected Promise.
 
 // Function that returns a Promise
 function fetchUser(userId: number): Promise<string> {
