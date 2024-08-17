@@ -1,5 +1,5 @@
 /** Omit in TypeScript */
-var person = {
+const person = {
     name: "John Doe",
     age: 30,
     address: "123 Main St",
@@ -14,3 +14,4 @@ updateUserInfo({
     email: "newEmail@example.com",
     // id is omitted
 });
+export {};

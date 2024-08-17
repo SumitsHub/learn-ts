@@ -22,9 +22,9 @@ interface Person {
   email: string;
 }
 
+// You want to create a new type that only includes the name and email properties. You can use Pick to achieve this -
 type PersonContactInfo = Pick<Person, 'name' | 'email'>;
 
-// You want to create a new type that only includes the name and email properties. You can use Pick to achieve this -
 const contactInfo: PersonContactInfo = {
   name: "John Doe",
   email: "john.doe@example.com"

@@ -1,12 +1,13 @@
+"use strict";
 /** Pick in TS */
 // You want to create a new type that only includes the name and email properties. You can use Pick to achieve this -
-var contactInfo = {
+const contactInfo = {
     name: "John Doe",
     email: "john.doe@example.com"
     // Only name and email are included
 };
 // Create an instance of the new type
-var userBasicInfo = {
+const userBasicInfo = {
     id: 1,
     name: "Jane Doe",
     email: "jane.doe@example.com",

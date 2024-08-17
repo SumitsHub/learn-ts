@@ -41,3 +41,5 @@ updateUserInfo({
   email: "newEmail@example.com",
   // id is omitted
 });
+
+export { User }; // to make it module
