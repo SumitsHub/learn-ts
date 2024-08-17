@@ -1,7 +1,7 @@
 ## Initialize TS project
 - TS project initialized using `tsc --init`
 - Created folders 'src' and 'dist' using `mkdir src dist`
-- Create file 'index.ts' using `echo >src/index.ts`
+- Create file 'index.ts' using `echo > src/index.ts`
 
 ## Initialize node project
 - create "package.json" file using `npm init -y`
