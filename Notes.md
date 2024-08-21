@@ -32,9 +32,11 @@ tsc filename
 
 ## Difference between 'types' and 'interface'
 - interface can't have multiple aliases and can be use to define object type only
-- type alias can be anything literally -> type Answer = 'YES' | 'NO';
+- type can define union and intersection types, offering more flexibility
+- type alias can be anything literally -> type Answer = 'YES' | 'NO'; type tuple = [string, number]
 - interface can be reopened type alias can't
 - interface can 'extend' whereas type alias can intersect using '&'
+- interface Can be implemented by classes, making it useful for defining contracts in object-oriented programming
 
 ## Type Declaration Files
 - `.d.ts` files used for type declarations purpose
