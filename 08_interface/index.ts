@@ -25,7 +25,7 @@ let person2: Person = { id: 1, fname: "Gal", lname: "Gadot", nickname: "Gady" };
 
 interface Animal {
   name: string;
-  getName(): () => string; // using arrow function syntax for method
+  getName: () => string; // using arrow function syntax for method
   setName(name: string): void; // using brackets
 }
 

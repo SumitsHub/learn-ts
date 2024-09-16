@@ -66,7 +66,7 @@ myVar = 23;
 
 
 //* Type - 'unknown'
-// Usage: The unknown type is a safer alternative to any. It also allows you to assign any value to a variable, but with unknown, you must perform type checks or type assertions before performing operations on that variable.
+// Usage: The unknown type is a safer alternative to 'any'. It also allows you to assign any value to a variable, but with unknown, you must perform type checks or type assertions before performing operations on that variable.
 // Implications: This forces you to handle the variable more cautiously, ensuring that you don't accidentally perform invalid operations, which helps prevent runtime errors.
 
 let value: unknown;
