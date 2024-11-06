@@ -1,6 +1,6 @@
 //* Function parameter annotation
 
-//* without type annotation - parameter type will be 'any' by default
+//* without type annotation - parameter type will be 'any' by default - implicit 'any'
 function square(num) {
   return num * num;
 }
@@ -44,6 +44,7 @@ function greet2(name: string = "Unknown") {
 }
 
 greet2(); // NO ERROR
+greet2(undefined); // No error
 greet2("Devil");
 
 // greet2(23); // ERROR - Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -88,7 +89,7 @@ function printTwice(msg: string): void {
   console.log(msg);
 
   // return ""; // ERROR - Type 'string' is not assignable to type 'void'.
-  // return void; // ERROR - Expression expected.
+  // return void; // ERROR - Expression expected - 'void' is not a value it's a type, you can't return 'type'
   // return null; // Error - Type 'null' is not assignable to type 'void'.
   // return undefined; // No error - it works
   return; // No error

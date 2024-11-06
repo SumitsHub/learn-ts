@@ -61,7 +61,7 @@ let shoes: Product = {
 };
 
 shoes.applyDiscount(40);
-console.log(shoes.price); // 6-
+console.log(shoes.price); // 60
 
 //* Reopening Interfaces - interfaces don't get override if re-declared in the same scope instead get's merged
 

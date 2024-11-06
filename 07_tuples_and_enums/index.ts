@@ -63,6 +63,11 @@ enum ArrowKeys {
 
 let move = ArrowKeys.LEFT;
 
+console.log(move === 'left'); // NO ERROR
+// console.log(move === 'up'); // ERROR: This comparison appears to be unintentional because the types 'ArrowKeys.LEFT' and '"up"' have no overlap.
+
+
+
 //* TS compiler behind the scene - generates extra code for 'enum' in JS, to avoid that use const keyword before enum declaration
 const enum Day {
   SUNDAY,
@@ -70,3 +75,4 @@ const enum Day {
 }
 
 let d = Day.SUNDAY; // var d = 0 /* Day.SUNDAY */; - no extra code for enum Day
+console.log(d === 0); // NO ERROR

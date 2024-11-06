@@ -131,7 +131,7 @@ class Developer extends Employee {
     super(name);
   }
 
-  // implementing abstract method
+  // implementing abstract method [ERROR (if not implemented): Non-abstract class 'Developer' does not implement inherited abstract member getSalary from class 'Employee']
   getSalary(): number {
     return this.salary;
   }

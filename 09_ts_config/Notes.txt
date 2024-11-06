@@ -4,7 +4,7 @@ Run 'tsc -w index' OR 'tsc --watch' to start compilation in watch mode
 
 By default 'tsc' OR 'tsc --watch' command will look for all the '.ts' files in the current directory
 
-Compiler Options:
+Compiler Options?:
 1. "files": array of file names to include
 2. "include": Specifies an array of filenames or patterns to include in the program. These filenames are resolved relative to the directory containing tsconfig.json file.
 3. "exclude": Specifies am array of filenames or patterns to skip in the program. Default value is: 'node_modules'

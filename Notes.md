@@ -19,7 +19,7 @@ OR (without file extension)
 ```bash
 tsc filename
 ```
-- After compiling it will generate .js file with the same filename
+- After compiling it will generate .js file with the same filename (output directory/filename can be configured)
 
 
 ## General points
@@ -29,6 +29,15 @@ tsc filename
 - number, string, null, undefined, boolean, void
 - TS specific: any, never, unknown
 
+## Difference between 'any' and 'unknown'
+- any
+  - Flexible but Unsafe: Allows any type of value, and you can perform any operation without TypeScript checks.
+  - No Type Safety: Bypasses type checking, which can lead to runtime errors.
+  - Use Case: Best for rapid prototyping or gradual typing when type is unknown or not yet defined.
+- unknown
+  - Type-Safe: Allows any type of value, but requires type checking before performing operations.
+  - Safer than any: Forces you to narrow down the type (e.g., with typeof or type guards) before using it.
+  - Use Case: Preferred over any when dealing with uncertain types in safer, more type-strict applications.
 
 ## Difference between 'types' and 'interface'
 - interface can't have multiple aliases and can be use to define object type only

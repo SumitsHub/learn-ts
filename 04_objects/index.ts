@@ -11,7 +11,7 @@ function printName(name: { first: string; last: string }) {
 }
 
 // printName(); // ERROR - Expected 1 arguments, but got 0.
-printName({ first: "Neha", last: "Monga" });
+printName({ first: "Smriti", last: "Mandana" });
 
 //* Return type annotation
 
@@ -28,8 +28,10 @@ function createPerson(name: string): { name: string; age: number } {
 // Passing object literal as argument
 // printName({ first: "Pallavi", last: "Borate", age: 30 }); // ERROR - Object literal may only specify known properties, and 'age' does not exist in type '{ first: string; last: string; }'.
 let person = { first: "Pallavi", last: "Borate", age: 30 };
-printName(person); // NO ERROR when variable passed instead of object literal
+printName(person); // NO ERROR when 'variable' passed instead of object literal
 printName({ ...person }); // NO ERROR - spread operator
+// printName({ ...person, age: 90 }); // ERROR - trying to pass age
+
 
 //* 'type' alias - instead of using object literals for type annotation we can create type alias
 

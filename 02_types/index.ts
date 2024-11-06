@@ -31,6 +31,7 @@ console.log(num.toFixed(1)); // 23.9
 let isMarried: boolean = false;
 isMarried = true;
 
+// Invalid operations
 // isMarried = 'true';
 // isMarried = null;
 // isMarried = undefined;
