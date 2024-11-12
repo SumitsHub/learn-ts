@@ -65,10 +65,10 @@ console.log(getLength({ random: 'random', length: 10 })); // 10
 
 // console.log(getLength(4)); // Error: Argument of type '4' is not assignable to parameter of type 'Lengthwise'
 
-// NOTE: we can't extend interface while defining class
+// NOTE: we can't extend 'interface' while defining class
 // class Some extends Lengthwise { } 
 
-//* Generics with "keyof" constraint
+//* Generics with "keyof" constraint - K extends 'keyof T'
 function getProperty<T, K extends keyof T>(obj: T, key: K) {
   return obj[key];
 }
