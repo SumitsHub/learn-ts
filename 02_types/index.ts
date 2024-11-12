@@ -86,3 +86,9 @@ if (typeof value === "string") {
 
 // Without type checking, this will cause a compilation error
 // console.log(value.toFixed(2)); // Error: Object is of type 'unknown'.
+
+
+//* declaring type using 'typeof' operator
+let stringValue = "Something";
+
+let zx: typeof stringValue = ""; // typeof zx = string
