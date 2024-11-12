@@ -76,3 +76,10 @@ const enum Day {
 
 let d = Day.SUNDAY; // var d = 0 /* Day.SUNDAY */; - no extra code for enum Day
 console.log(d === 0); // NO ERROR
+
+
+//* enums must have initializers for 'string' values, for numeric values it takes next value
+enum TEST {
+  val1= 'val1',
+  // val2 // Error: Enum member must have initializer
+}
