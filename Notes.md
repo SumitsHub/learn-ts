@@ -57,3 +57,43 @@ tsc filename
   - [npmjs](https://www.npmjs.com/package/@types/node)
   - [github](https://github.com/DefinitelyTyped/DefinitelyTyped)
   - Example: `npm install --save-dev @types/lodash`
+
+## Modules and Namespaces
+In typescript modules and namespaces are used to organize and encapsulate code.
+
+### Modules
+- Definition: Modules are files that contain code. They can export import other modules.
+- Usage: Modules are used to split code into smaller, reusable pieces.
+- Syntax: Uses 'import' and 'export' keywords
+- Scope: Modules have their scope, and the variables, functions, classes, etc. defined in a module are not accessible outside unless explicitly exported
+- Example:
+```ts
+// math.js
+export function add(a: number, b: number) {
+  return a + b;
+}
+
+// main.js
+import {add} from './math.js'
+console.log(add(2,3));
+
+```
+
+### Namespaces
+- Definition: Namespaces are a way to group related code together under a single name
+- Usage: Namespaces are used to organize code withing single file or across multiple files
+- Syntax: Uses the 'namespace' keyword
+- Scope: Namespaces fo not have their own scope, they are part of global scope unless nested within another namespace
+- Example:
+```ts
+namespace MathUtils {
+  export function add(a: number, b: number) {
+    return a + b;
+  }
+}
+
+console.log(add(2,3));
+
+```
+
+Modules are preferred way to organize code in modern TypeScript, while namespaces are an older feature that is less commonly used today
