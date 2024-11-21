@@ -1,5 +1,8 @@
 ## Advanced Topics - TypeScript
 
+### Custom Utility Types:
+You can implement most utility types using mapped types, indexed access types, and conditional types.
+
 ### 05. What Are Template Literal Types?
 
 Template literal types in TypeScript allow you to create dynamic string types using the syntax of template literals (like those in JavaScript). They are formed by combining literal types, unions, and interpolations to produce new string types.
