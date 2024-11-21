@@ -1,4 +1,4 @@
-//* typeof guards
+//* typeof guard
 
 function triple(inp: number | string) {
   // using typeof operator as guard
@@ -43,8 +43,7 @@ function getRuntime(media: Movie | TVShow): number {
   // console.log(typeof media);
   // object - cannot use typeof for type narrowing for object parameter
 
-  if ("noOfEpisodes" in media)
-    return media.noOfEpisodes * media.episodeDuration;
+  if ("noOfEpisodes" in media) return media.noOfEpisodes * media.episodeDuration;
   return media.duration;
 }
 
@@ -72,6 +71,7 @@ interface Dog {
   breed: string;
 }
 
+//* Custom Type Guard
 // defining function to return type predicate for narrowing type
 function isCat(animal: Cat | Dog): animal is Cat {
   return (animal as Cat).noOfLives !== undefined;
@@ -85,9 +85,7 @@ function makeNoise(animal: Cat | Dog) {
   }
 }
 
-
 makeNoise({ name: "Sundari", noOfLives: 5 }); // Meow
-
 
 //* Discriminated unions - a common pattern in Typescript involves creating a 'literal property' that is common across multiple types.
 
@@ -141,7 +139,6 @@ console.log(area({ kind: "square", size: 5 })); // 25
 console.log(area({ kind: "rectangle", width: 5, height: 10 })); // 50
 console.log(area({ kind: "circle", radius: 5 })); // 78.54
 
-
-//* Other possible ways -
+//* Other possible ways of type narrowing-
 // 1. Array.isArray()
 // 2. Number.isNaN()
