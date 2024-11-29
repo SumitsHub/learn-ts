@@ -16,7 +16,7 @@ const resOK: HTTPResponse = [200, "OK"];
 
 // pushing extra don't give error
 resOK.push("Something");
-console.log(resOK);
+console.log(resOK); // [ 200, 'OK', 'Something' ]
 
 //* array of tuples
 const responses: HTTPResponse[] = [

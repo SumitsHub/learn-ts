@@ -137,7 +137,7 @@ let ab: AB = {
 
 type ABC = A & B & { c: string };
 
-let abc = {
+let abc: ABC = {
   a: "A",
   b: "B",
   c: "C",

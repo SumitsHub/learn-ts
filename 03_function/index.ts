@@ -50,7 +50,7 @@ greet2("Devil");
 // greet2(23); // ERROR - Argument of type 'number' is not assignable to parameter of type 'string'.
 
 //* Return type annotation */
-// NOTE - return type always get inferred based on return value
+// NOTE - return type always get 'inferred' based on return value
 
 // Implicit return type - 'number'
 function sum(num: number) {
