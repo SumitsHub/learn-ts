@@ -49,3 +49,28 @@ Example: If A is a subtype of B, then Handler<B> is a subtype of Handler<A>.
 - Invariance: Prevents unsafe operations; string[] cannot fully substitute unknown[] in mutable contexts to avoid breaking the type system.
 
 By enforcing invariance for arrays in mutable contexts, TypeScript ensures type safety and prevents runtime errors caused by incorrect assumptions about array contents.
+
+
+### 09. Decorators
+What Are Decorators in TypeScript?
+- Decorators are special functions in TypeScript (and JavaScript) that allow you to modify or annotate classes, methods, properties, or parameters at design time. They are part of the experimental ES proposal and are enabled in TypeScript via the "experimentalDecorators" compiler option.
+
+- Decorators are used for metaprogramming purposes and are commonly seen in frameworks like Nest & Angular.
+
+#### Types of Decorators in TypeScript
+There are several types of decorators, and they can be applied to different parts of a class:
+1. Class Decorators: Applied to the class itself.
+2. Method Decorators: Applied to the methods of a class.
+3. Property Decorators: Applied to properties of a class.
+4. Parameter Decorators: Applied to the parameters of methods (not discussed here but similarly implemented).
+
+
+#### Enabling Decorators in TypeScript
+To use decorators in TypeScript, you need to enable the experimentalDecorators flag in your tsconfig.json:
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true
+  }
+}
+```
