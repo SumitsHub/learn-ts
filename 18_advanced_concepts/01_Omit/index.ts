@@ -1,4 +1,4 @@
-/** Omit in TypeScript */
+//** Omit in TypeScript */
 
 // In TypeScript, Omit is a utility type that constructs a new type by picking all properties from an existing type except for the specified keys.
 // This is useful when you want to create a type that is similar to another type but without certain properties.

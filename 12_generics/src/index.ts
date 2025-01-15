@@ -1,6 +1,8 @@
 // array of numbers - type bound to number
 // const nums: number[] = [];
 
+//* Generics - allows us to create reusable components that can work with a variety of types rather than a single one.
+
 //* Examples
 
 //* #01. Array - creating array of numbers and strings using generics
@@ -50,7 +52,7 @@ const mergedObj = merge({ name: "John" }, { age: 30 });
 console.log(mergedObj); // {name: "John", age: 30}
 
 
-//* Generics with constraints
+//* Generics with constraints - T extends 'some type'
 interface Lengthwise {
   length: number;
 }

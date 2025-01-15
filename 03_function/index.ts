@@ -19,7 +19,7 @@ multiply(23, 5.6);
 // multiply(2, 'Something'); // Error: Argument of type 'string' is not assignable to parameter of type 'number'.
 // NOTE: from error message we can understand difference between 'argument' and 'parameter'
 
-// multiply(true, 4); // ERROR
+// multiply(true, 4); // ERROR - Argument of type 'boolean' is not assignable to parameter of type 'number'.
 
 
 //* Arrow function
@@ -115,6 +115,6 @@ function notStop1() {
 
 function notStop2(): never {
   while (true) {
-    console.log("I will never stop");
+    console.log("I am unstoppable");
   }
 }

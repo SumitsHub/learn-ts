@@ -1,4 +1,4 @@
-/** Pick in TS */
+//** Pick in TS */
 
 // Pick is a utility type that allows you to create a new type by picking the properties from an existing type.
 // This is useful when you want to create a type that only includes certain properties from another type.
@@ -23,14 +23,13 @@ interface Person {
 }
 
 // You want to create a new type that only includes the name and email properties. You can use Pick to achieve this -
-type PersonContactInfo = Pick<Person, 'name' | 'email'>;
+type PersonContactInfo = Pick<Person, "name" | "email">;
 
 const contactInfo: PersonContactInfo = {
   name: "John Doe",
-  email: "john.doe@example.com"
+  email: "john.doe@example.com",
   // Only name and email are included
 };
-
 
 //* Complex example
 interface Address {
@@ -55,7 +54,7 @@ interface User {
 }
 
 // Create a new type that includes only the id, name, email, and company name properties
-type UserBasicInfo = Pick<User, 'id' | 'name' | 'email' | 'company'>;
+type UserBasicInfo = Pick<User, "id" | "name" | "email" | "company">;
 
 // Create an instance of the new type
 const userBasicInfo: UserBasicInfo = {
@@ -67,9 +66,9 @@ const userBasicInfo: UserBasicInfo = {
     location: {
       street: "123 Tech Lane",
       city: "Innovation City",
-      zipCode: "12345"
-    }
-  }
+      zipCode: "12345",
+    },
+  },
   // Only id, name, email, and company are included
 };
 

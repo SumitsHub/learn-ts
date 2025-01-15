@@ -88,7 +88,7 @@ if (typeof value === "string") {
 // console.log(value.toFixed(2)); // Error: Object is of type 'unknown'.
 
 
-//* declaring type using 'typeof' operator
+//* declaring type using 'typeof' operator - this is useful when you want to declare a variable with the same type as another variable
 let stringValue = "Something";
 
 let zx: typeof stringValue = ""; // typeof zx = string
