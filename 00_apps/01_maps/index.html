@@ -8,7 +8,16 @@
 </head>
 
 <body>
-    <script type="module" src="./src/index.ts"></script>
+    <div id="map" style="height: 100%;"></div>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU&callback=Function.prototype"></script>
+    <script type="module" defer src="./src/index.ts"></script>
+    
+    <style>
+        #map {
+            position: static !important;
+        }
+    </style>
 </body>
 
 </html>
